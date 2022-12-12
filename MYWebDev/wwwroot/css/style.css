@@ -138,8 +138,40 @@ img{
 .link-custom:hover::after{
     width: 100%;
 }
+
+/*Card*/
+.card-custom .card-custom-image{
+    overflow:hidden;
+}
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+/*--------------------------*/
+
+/*Footer*/
+.social-icons {
+
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
+
+/*--------------------------*/
+
 /*Animation*/
-.typewriter{
+.typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .12em solid; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
