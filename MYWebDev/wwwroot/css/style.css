@@ -19,10 +19,14 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--color-heading);
     font-weight: 700;
 }
+.text-brand{
+    color: var(--color-brand2);
+}
 
-a{
+a {
     text-decoration: none;
-    color: var(--color-brand);
+    color: #6e9ba1 ;
+    transition: all 0.6s ease !important;
 }
 
 a:hover {
@@ -32,7 +36,58 @@ img{
     width:100%;
 }
 
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255, 255,255,0.1)
+}
+
+.achievement{
+    
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+.shadow-effect:hover {
+    box-shadow: -6px 4px 0 0  var(--color-brand) !important;
+}
+
+.imgbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
 /*Navbar*/
+.navbar {
+    background-color: var(--color-base);
+}
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+.navbar .nav-link:hover {
+    color: var(--color-brand) !important;
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand) !important;
+}
+
 @media(min-width: 992px){
     .navbar {
         min-height: 100vh;
@@ -40,5 +95,77 @@ img{
         background: linear-gradient(rgba(3,63,71,0.82), rgba(3, 63, 71, 0.9)), url(../images/partc_logo_square.png);
         background-size: cover;
         background-position: center;
+    }
+    .navbar-brand img {
+        border: 8px solid var(--color-brand);
+    }
+    /*Content*/
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+    }
+}
+/*Botton*/
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+}
+.btn-brand{
+    background-color: var(--color-brand);
+    border-color: var(--color-brand)
+}
+
+.btn-brand:hover,
+.btn-brand:focus{
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+.link-custom:hover::after{
+    width: 100%;
+}
+/*Animation*/
+.typewriter{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .12em solid; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em; /* Adjust as needed */
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    /* The typing effect */
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+    /* The typewriter cursor effect */
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: palegoldenrod;
     }
 }

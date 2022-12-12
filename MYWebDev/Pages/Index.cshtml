@@ -1,10 +1,69 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-   
-    
-</div>
+<section id="home" class="full-height px-lg-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>Hello</h1>
+                <h2 class="display-4 fw-bold typewriter">I'm <span>Junior Developer</span></h2>
+                <a href="#AboutMe" class="btn btn-brand me-3">Explore My achivement</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="AboutMe" class="full-height px-lg-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1 class="text-brand">About Me</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="portfolio" class="full-height px-lg-5">
+    <div class="container">
+        <div class="row pb-4">
+            <div class="col-lg-8">
+                <h6 class="text-brand">Achievements</h6>
+                <h1>This is all a proud achievement. </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col-lg-4 col-md-6 col-sm-12 mb-3">
+                <div class="achievement p-4 bg-base rounded shadow-effect">
+                    <div class="imgbox">
+                        <img src="~/images/codekathon.jpg" alt="image-project" />
+                    </div>
+                    <h4 class="mt-4 mb-2">Gadget for a Parkison’s Disease Screening Household</h4>
+                    <p>Python ML</p>
+                    <a href="#" class="link-custom">Read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12  mb-3">
+                <div class="achievement p-4 bg-base rounded shadow-effect">
+                    <div class="imgbox">
+                        <img src="~/images/image (3).png" alt="image-project" />
+                    </div>
+                    <h4 class="mt-4 mb-2">Gadget for a Parkison’s Disease Screening Household</h4>
+                    <p>Python ML</p>
+                    <a href="#" class="link-custom">Read more</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12  mb-3">
+                <div class="achievement p-4 bg-base rounded shadow-effect">
+                    <div class="imgbox">
+                        <img src="~/images/image_phy.png" alt="image-project" />
+                    </div>
+                    <h4 class="mt-4 mb-2">Gadget for a Parkison’s Disease Screening Household</h4>
+                    <p>Python ML</p>
+                    <a href="#" class="link-custom">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
