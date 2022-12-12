@@ -37,7 +37,8 @@ img{
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(rgba(3,63,71,0.82), rgba(3, 63, 71, 0.9)), url(../images/IMG_8984.JPG);
+        background: linear-gradient(rgba(3,63,71,0.82), rgba(3, 63, 71, 0.9)), url(../images/partc_logo_square.png);
         background-size: cover;
+        background-position: center;
     }
 }
