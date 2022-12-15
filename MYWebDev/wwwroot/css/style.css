@@ -1,12 +1,15 @@
 ﻿:root {
-    --color-body: #b6cbce;
-    --color-heading: #eef3db;
-    --color-base: #033f47;
-    --color-base2: #022a30;
-    --color-brand: #e0f780;
-    --color-brand2: #deff58;
+    --color-body: #e1e1e1;
+    --color-heading:#3e3939;
+    --color-base: #f6f190;
+    --color-base2: #e1e1e1;
+    --color-brand: whitesmoke;
+    --color-brand2: #b91d1d;
     --sidbar-width: 240px;
     --font-base: "Bai Jamjuree";
+}
+html{
+    font-size: calc(60% + 0.8vmin);
 }
 
 body{
@@ -23,14 +26,19 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--color-brand2);
 }
 
+p{
+    font-size: 1.1rem;
+    color: #3e3939
+}
+
 a {
     text-decoration: none;
-    color: #6e9ba1 ;
+    color: #f56b4d ;
     transition: all 0.6s ease !important;
 }
 
 a:hover {
-    color:var(--color-brand);
+    color:var(--color-brand2);
 }
 img{
     width:100%;
@@ -59,7 +67,7 @@ img{
     transition: all 0.5s;
 }
 .shadow-effect:hover {
-    box-shadow: -6px 4px 0 0  var(--color-brand) !important;
+    box-shadow: -6px 4px 0 0  #b91d1d !important;
 }
 
 .imgbox {
@@ -73,12 +81,13 @@ img{
 
 /*Navbar*/
 .navbar {
-    background-color: var(--color-base);
+    background-color: #620808;
 }
 .navbar .nav-link {
+    font-size: 1.26rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: white;
+    color: #fff200 !important;
 }
 .navbar .nav-link:hover {
     color: var(--color-brand) !important;
@@ -92,7 +101,7 @@ img{
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(rgba(3,63,71,0.82), rgba(3, 63, 71, 0.9)), url(../images/partc_logo_square.png);
+        background: linear-gradient(rgba(255,102,102,0.33), rgba(255,102,102,0.89)), url(../images/partc_logo_square.png);
         background-size: cover;
         background-position: center;
     }
@@ -129,7 +138,7 @@ img{
     content: "";
     width: 0%;
     height: 2px;
-    background-color: var(--color-brand);
+    background-color: var(--color-brand2);
     position: absolute;
     left: 0;
     top: 110%;
@@ -153,8 +162,13 @@ img{
 /*--------------------------*/
 
 /*Footer*/
-.social-icons {
+.footer {
 
+    bottom: 0;
+}
+
+.social-icons {
+    color: aliceblue;
 }
 
 .social-icons a {
@@ -198,6 +212,14 @@ img{
     }
 
     50% {
-        border-color: palegoldenrod;
+        border-color: orangered;
     }
+}
+/* Cursor _ Typing Animation*/
+.container h2 span {
+    color: var(--color-brand2);
+}
+
+/* If fade out option is set */
+.typed-fade-out {
 }

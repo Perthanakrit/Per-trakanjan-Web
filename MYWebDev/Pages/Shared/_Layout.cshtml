@@ -17,11 +17,11 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container flex-lg-column">
                 <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
-                    <span class="h3 fw-bold d-block d-lg-none">Per Trakanjan</span>
+                    <span class="h3 fw-bold d-block d-lg-none" style="color: #f56b4d; font-size: 2.3rem;">Per Trakanjan</span>
                     <img src="./images/IMG_0481.jpg" class="d-none d-lg-block" alt="" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="las la-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
@@ -42,6 +42,7 @@
             </div>
         </nav>
     </header>
+
     <div id="content-wrapper">
         @RenderBody()
     </div>
@@ -61,15 +62,21 @@
                 </div>
             </div>
         </div>
-            
-     
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" asp-append-version="true"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" asp-append-version="true"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Student", "Junior Developer"],
+            typeSpeed: 150,
+            backSpeed: 200,
+            loop: true
+        })
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
