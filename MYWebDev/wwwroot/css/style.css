@@ -8,8 +8,9 @@
     --sidbar-width: 240px;
     --font-base: "Bai Jamjuree";
 }
-html{
+html {
     font-size: calc(60% + 0.8vmin);
+    scroll-behavior: smooth !important;
 }
 
 body{
@@ -171,6 +172,26 @@ img{
 .card-custom:hover .card-custom-image img {
     transform: scale(1.1);
 }
+
+/*---Read more*/
+/*Image*/
+info-img{
+
+}
+info-img img {
+    height: 12.5rem;
+}
+
+.shadow-effect-info {
+    transition: all 0.5s;
+}
+
+.shadow-effect-info:hover {
+    box-shadow: -6px 4px 0 0 #fff200 !important;
+}
+
+
+
 
 /*--------------------------*/
 
