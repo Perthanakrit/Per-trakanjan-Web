@@ -1,5 +1,5 @@
 ﻿@page
-@model Pages.InfoAchievements.ReadmoreProject1Model
+@model Pages.ReadmoreProject1Model
 @{
     ViewData["Title"] = "Achievements";
 }
@@ -44,5 +44,50 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
     <div class="py-3">
         <h4>Credit: </h4><p>Oil Furk </p>
+    </div>
+
+    <!--Comment-->
+    <div class="container">
+        <div class="row">
+            <div class="row justify-content-center text-center mb-1">
+                <h1 class="text-brand text-center" stlye="font-size: 1rem">Comment</h1>
+            </div>
+            <form method="post" class="col-lg g-lg-3 gy-3">
+                <div class="form-group col-12 mb-2">
+                    <input type="text" name="Name" class="form-control" placeholder="Your name (real name, alias, anything)" />
+                 </div>
+                <div class="form-group col-12">
+                    <textarea type="text" name="Comment" rows="5" class="form-control" placeholder="Your opinion"></textarea>
+                </div>
+                <div class="form-group col-12 d-grid mt-3">
+                    <button class="btn btn-light btn-brand" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="mt-4">
+                <h4>All comments</h4>
+            </div>
+            
+           
+                @if (Model.Comments != null)
+                {
+                <div class="card-custom rounded shadow-effect-info p-2 mb-3" style="background-color: whitesmoke;">
+                    @foreach (var comment in Model.Comments)
+                    {
+                        <div class="d-flex mb-3">
+                            <div class="font-weight-bold mb-1 me-2" style="color:#3e3939; font-size: 1.2rem;"><strong>@comment.Name </strong></div>
+
+                            <div class="font-size-sm" style="color:#3e3939; font-size: 1.1rem;">
+                                @comment.Comment
+                            </div>
+                        </div>
+                    }
+                </div>
+                }
+            
+        </div>
     </div>
 </div>

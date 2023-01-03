@@ -11,7 +11,7 @@
                 <h1 style="font-size: 10rem">Hello</h1>
                 <h2 class="display-4 fw-bold pe-1" style="font-size: 2.5rem">I'm <span class="auto-type"></span></h2>
                 <div class="pt-4">
-                    <a href="#AboutMe" class="btn btn-brand me-3">Explore My achivement</a>
+                    <a href="#AboutMe" class="btn btn-brand me-3">Explore </a>
                 </div>
             </div>
         </div>
@@ -38,7 +38,13 @@
                                     Fullname: Thanakrit Trakanjan <br />
                                     Nickname: Per <br />
                                     My brith: 11 December 2004 <br />
-                                    Age: 18 years old &#9473; <span id="demo" style="color:#b91d1d; font-size:1.2rem;"></span> 19 years old
+                                    Age: 18 years old &#9473;
+
+                                    <span class="bg-light">
+                                        <span  id="demo" style="color:#b91d1d; font-size:1.2rem;"></span>
+                                        &#8658; 19 years old
+                                    </span>
+                                    
                                 </p>
                             </div>
                         </div>
@@ -49,12 +55,14 @@
                         <div class="bg-base rounded shadow-effect">
                             <div class="col-lg-10 col-md-10 col-sm-11 p-2">
                                 <h4 class="text-brand" style="">Skill</h4>
-                                <p>
-                                    Fullname: Thanakrit Trakanjan <br />
-                                    Nickname: Per <br />
-                                    My brith: 11 December 2004 <br />
-                                    Age: 18 years old &#9473; <span id="demo" style="color:#b91d1d; font-size:1.2rem;"></span> 19 years old
-                                </p>
+                                 <h6>Coding</h6>
+                                <div class="skill-icon ms-0">
+                                    <img class="mx-3" src="https://img.icons8.com/color/48/null/c-sharp-logo-2.png" />
+                                    <img class="mx-3" src="https://img.icons8.com/fluency/48/null/python.png" />
+                                    <img class="mx-3" src="https://img.icons8.com/color/48/null/html-5--v1.png" />
+                                    <img class="mx-3" src="https://img.icons8.com/color/48/null/css3.png" />
+                                    
+                                </div>  
                             </div>
                         </div>
                     </div>
@@ -65,16 +73,39 @@
                 <h4>Education</h4>
                 <div class="row gy-4">
                     <div class="col-12">
-                        <div class="bg-base rounded shadow-effect ps-2">
-                            <div class="col-lg-6">
-                                <h4 class="text-brand" style="">primary education</h4>
-                                <p>Malewittaya School</p>
+                        <div class="bg-base rounded shadow-effect mb-3 ps-2">
+                            <div class="p-2">
+                                <h4 class="text-brand">Elementary education</h4>
+                                <!-- <div class="row">
+                                    <div class="pull-left mr-2">
+                                        <img src="https://marie.ac.th/wp-content/uploads/2021/07/cropped-logo.png" style="width:5.5rem; height:5.5rem;" />
+                                    </div>
+                                    <div class="py-3 my-3 mx-3 mx-lg-2 mx-md-0 col-lg-6 col-md-6 col-xs-1">
+                                        <p style="font-size:1.2rem;">Marie wittaya school sisaket </p>
+                                    </div>
+                                </div>-->
+                                <div class="row">
+                                    <div class="py-3 mx-3 col-lg-3 col-md-2 col-sm-2">
+                                        <img src="https://marie.ac.th/wp-content/uploads/2021/07/cropped-logo.png" style="width:5.5rem; height:5.5rem;" />
+                                    </div>
+                                    <div class="py-3 my-3 mx-3 mx-lg-2 mx-md-0 col-lg-6 col-md-6 col-sm-6">
+                                        <p style="font-size:1.2rem;">Marie wittaya School Sisaket </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="bg-base rounded shadow-effect ps-2">
-                            <div class="col-lg-6">
-                                <h4 class="text-brand">Junior and senior high school </h4>
-                                <p>Sisaketwittayalai School</p>
+                        <div class="bg-base rounded shadow-effect mb-3 ps-2">
+                            <div class="p-2">
+                                <h4 class="text-brand">Junior and senior high schools </h4>
+                                <div class="row">
+                                    <div class="py-3 mx-3 col-lg-3 col-md-2 col-sm-2">
+                                        <img src="https://academic.skw.ac.th/wp-content/uploads/2018/12/cropped-Skw-logo-400px.png" style="width:5.5rem; height:5.5rem;" />
+                                    </div>
+                                    <div class="py-3 my-3 mx-3 mx-lg-2 mx-md-0 col-lg-6 col-md-6 col-sm-6">
+                                        <p style="font-size:1.2rem;"> Sisaketwittayalai School</p>
+                                    </div>
+                                </div>
+                                 
                             </div>
                         </div>
                     </div>
@@ -94,48 +125,35 @@
                 <h6>This is all a proud achievement. </h6>
             </div>
         </div>
-
+        <!--Projects-->
         <div class="row gy-4">
-            <div class=" col-lg-6 col-md-6 col-sm-12">
-                <div class="card-custom bg-base rounded shadow-effect">
-                    <div class="card-custom-image rounded">
-                        <img class=" rounded" src="~/images/codekathon.jpg" alt="image-project" />
-                    </div>
-                    <div class="card-custom-content p-4">
-                        <h4 class="mt-4 mb-2">Gadget for a Parkison’s Disease Screening Household</h4>
-                        <p>Python ML</p>
-                        <a class="link-custom" asp-area="" asp-page="/ReadmoreProject1">Read more</a>
-                    </div>  
-                </div>
-            </div>
+            @foreach(var project in Model.fakeProjectDB)
+            {
+                var imagePath = "~/images/" + project.ImageUrl;
+                var projectTitle = project.Title;
+                var readmore = "/" + project.ReadmoreUrl;
+                var devBy = project.Dev;
 
-            <div class=" col-lg-6 col-md-6 col-sm-12">
-                <div class="card-custom bg-base rounded shadow-effect">
-                    <div class="card-custom-image rounded">
-                        <img class=" rounded" src="~/images/image (3).png" alt="image-project" />
-                    </div>
-                    <div class="card-custom-content p-4">
-                        <h4 class="mt-4 mb-2">HamsterGame</h4>
-                        <p>Unity C# Game</p>
-                        <a class="link-custom" asp-area="" asp-page="/ReadmorInfoProject2">Read more</a>
-                    </div>
+                <div class="d-flex align-items-stretch col-lg-6 col-md-6 col-sm-12">
+                    <a asp-area="" asp-page="@readmore">
+                        <div class="card-custom bg-base rounded shadow-effect">
+                            <div class="card-custom-image rounded">
+                                <img class=" rounded" src="@imagePath" asp-append-version="true" alt="image-project" />
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4 class="mt-4 mb-2">@projectTitle</h4>
+                                <p>@devBy</p>
+                                <a class="link-custom" asp-area="" asp-page="@readmore">Read more</a>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-
-            <div class=" col-lg-6 col-md-6 col-sm-12">
-                <div class="card-custom bg-base rounded shadow-effect">
-                    <div class="card-custom-image rounded">
-                        <img class=" rounded" src="~/images/image_phy.png" alt="image-project" />
-                    </div>
-                    <div class="card-custom-content p-4">
-                        <h4 class="mt-4 mb-2">I AM HAMSTER</h4>
-                        <p>Unity C# Game</p>
-                        <a class="link-custom" asp-area="" asp-page="/ReadmoreProject3">Read more</a>
-                    </div>
-                </div>
-            </div>
+            }
+         
+            <!--Projects-->
         </div>
     </div>
 </section>
 <!-------------->
+<!--Talk me-->
 
