@@ -180,11 +180,11 @@ img{
 
 /*---Read more*/
 /*Image*/
-info-img{
+.info-img{
 
 }
-info-img img {
-    height: 12.5rem;
+.info-img img {
+    height: 20rem;
 }
 
 .shadow-effect-info {

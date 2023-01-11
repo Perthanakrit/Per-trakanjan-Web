@@ -16,8 +16,8 @@ namespace MYWebDev.Pages
         {
             
             new Projects(){Title ="HamsterGame", ImageUrl ="/HamsG/image.png", ReadmoreUrl="ReadmorInfoProject2", Dev="Unity C#"},
-            new Projects(){Title ="I AM HAMSTER", ImageUrl ="image_phy.png", ReadmoreUrl="ReadmoreProject3", Dev="Unity C#"},
-            new Projects(){Title ="Gadget for a Parkison’s Disease Screening Household", ImageUrl ="codekathon.jpg", ReadmoreUrl="ReadmoreProject1", Dev="Python ML"}
+            new Projects(){Title ="I AM HAMSTER", ImageUrl ="image_phy_resize.png", ReadmoreUrl="ReadmoreProject3", Dev="Unity C#"},
+            new Projects(){Title ="Gadget for a Parkison’s Disease Screening Household", ImageUrl ="codekathon_resize.png", ReadmoreUrl="ReadmoreProject1", Dev="Python ML"}
         };
 
         public IndexModel(ILogger<IndexModel> logger, CommentDbContext context)

@@ -12,7 +12,7 @@ namespace MYWebDev.Pages
     {
         /*public string? UserName { get; set; }
         public string? OpinionText { get; set; }*/
-
+        /*
         private readonly CommentDbContext _context;
         public ReadmoreProject1Model(CommentDbContext context)
         {
@@ -33,7 +33,7 @@ namespace MYWebDev.Pages
             _context.SaveChanges();
 
             Comments = _context.comments.ToList();
-        }
+        }*/
 
     }
 }
